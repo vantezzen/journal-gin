@@ -1,0 +1,13 @@
+.entry-content a.more-link {
+    white-space: nowrap;
+}
+.entry-header {
+    margin-bottom: 0;
+}
+.entry-content {
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+.entry-content p {
+    margin-top: 0;
+}
