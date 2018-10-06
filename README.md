@@ -8,6 +8,9 @@ Adaption of WordPress [Jinn theme](https://github.com/jekkilekki/theme-jin) for 
 4. Go to Journals' settings, under "Theme" choose "gin"
 5. Save settings - Your blog should now be in the CleanBlog theme
 
+# Source
+Most of this projects' source code originates form the [WordPress Theme Jinn](https://github.com/jekkilekki/theme-jin/). It has been modified to work with Journal.
+
 # Screenshots
 <p align="center"><img src="img/home.png"></p>
 <p align="center"><img src="img/post.png"></p>
