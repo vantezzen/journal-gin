@@ -26,3 +26,7 @@
 #header-image .site-description {
     font-size: 0.9rem;
 }
+
+.next-page {
+    float: right;
+}
