@@ -55,8 +55,14 @@
 
                                 <div class="menu-menu-container">
                                     <ul id="primary-menu" class="menu group">
-                                        <li id="menu-item-219" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a
-                                                href="{{ url }}">Home</a></li>
+                                        <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
+                                            <a href="{{ url }}">Home</a>
+                                        </li>
+                                        {{# menu }}
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
+                                                <a href="{{ url }}">{{ text }}</a>
+                                            </li>
+                                        {{/ menu }}
                                     </ul>
                                 </div>
 
