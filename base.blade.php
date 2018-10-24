@@ -56,7 +56,7 @@
                                 <div class="menu-menu-container">
                                     <ul id="primary-menu" class="menu group">
                                         <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
-                                            <a href="{{ url }}">Home</a>
+                                            <a href="{{ $url }}">Home</a>
                                         </li>
                                         @foreach ($menu as $item)
                                             <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
