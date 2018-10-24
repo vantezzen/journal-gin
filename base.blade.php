@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ title }}</title>
+    <title>{{ $title }}</title>
     <link rel='dns-prefetch' href='//s.w.org' />
-    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ url }}/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ $url }}/feed.xml" />
     <link rel='stylesheet' href='assets/foundation.css' type='text/css' media='all' />
     <link rel='stylesheet' href='assets/jinn.css' type='text/css' media='all' />
     <link rel='stylesheet' href='assets/style.css' type='text/css' media='all' />
@@ -21,8 +21,8 @@
             <div class="header-wrapper">
                 <div class="site-branding-header">
 
-                    <h1 class="site-title"><a href="{{ url }}">{{ title }}</a></h1>
-                    <p class="site-description">{{ description }}</p>
+                    <h1 class="site-title"><a href="{{ $url }}">{{ $title }}</a></h1>
+                    <p class="site-description">{{ $description }}</p>
 
                 </div><!-- .site-branding -->
             </div><!-- .header-wrapper -->
@@ -58,11 +58,11 @@
                                         <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
                                             <a href="{{ url }}">Home</a>
                                         </li>
-                                        {{# menu }}
+                                        @foreach ($menu as $item)
                                             <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
-                                                <a href="{{ url }}">{{ text }}</a>
+                                                <a href="{{ $item['url'] }}">{{ $item['text'] }}</a>
                                             </li>
-                                        {{/ menu }}
+                                        @endforeach
                                     </ul>
                                 </div>
 
@@ -76,7 +76,7 @@
         </div><!-- END data-sticky-container -->
 
 
-        {{{ content }}}
+        @yield('content')
 
         <a href="#" class="topbutton"></a><!-- Back to top button -->
 
@@ -87,7 +87,7 @@
                 <div class="row">
                     <div class="theme-info small-12 columns text-center">
                         <div class="copyright small-12 columns text-center">
-                            {{ copyright }} 
+                            {{ $copyright }} 
                         </div>
                     </div>
 
